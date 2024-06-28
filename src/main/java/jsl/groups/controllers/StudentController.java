@@ -15,7 +15,7 @@ public class StudentController {
     /**
      * The constant studentDto.
      */
-    public static StudentDto studentDto = new StudentDtoImplementation();
+    public static final StudentDto studentDto = new StudentDtoImplementation();
 
     /**
      * The constant createStudent. Persist data

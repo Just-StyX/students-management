@@ -14,6 +14,10 @@ public class Course {
     private String title;
     private int numberOfCredit;
 
+    public static Course init() {
+        return new Course();
+    }
+
     public String getCourseId() {
         return courseId;
     }

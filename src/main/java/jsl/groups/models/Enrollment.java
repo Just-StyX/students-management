@@ -9,10 +9,15 @@ import java.util.Objects;
  * @author github.com/Just-StyX
  */
 public class Enrollment {
+    private long id;
     private String ssn;
     private String courseId;
     private LocalDateTime dateRegistered;
     private char grade;
+
+    public static Enrollment init() {
+        return new Enrollment();
+    }
 
     public String getSsn() {
         return ssn;
@@ -71,5 +76,14 @@ public class Enrollment {
                 ", dateRegistered=" + dateRegistered +
                 ", grade=" + grade +
                 '}';
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public Enrollment setId(long id) {
+        this.id = id;
+        return this;
     }
 }

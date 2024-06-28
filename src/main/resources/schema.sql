@@ -1,8 +1,8 @@
 CREATE TABLE IF NOT EXISTS course (
     course_id VARCHAR(10) PRIMARY KEY,
-    subject_id VARCHAR(10) UNIQUE,
+    subject_id VARCHAR(10),
     course_number VARCHAR(10) UNIQUE,
-    title VARCHAR(10) NOT NULL,
+    title TEXT NOT NULL,
     number_of_credit BIGINT NOT NULL
 );
 
@@ -18,10 +18,11 @@ CREATE TABLE IF NOT EXISTS student (
     dept_id  CHAR(4) NOT NULL
 );
 
+
 CREATE TABLE IF NOT EXISTS enrollment (
     id BIGINT PRIMARY KEY AUTO_INCREMENT,
     date_registered TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    grade CHAR,
+    grade CHAR(1),
     ssn VARCHAR(20) REFERENCES student(ssn) ON DELETE CASCADE,
     course_id VARCHAR(10) REFERENCES course(course_id) ON DELETE CASCADE
 );

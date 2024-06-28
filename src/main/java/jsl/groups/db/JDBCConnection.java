@@ -9,7 +9,9 @@ import java.sql.SQLException;
  * @author github.com/Just-StyX
  */
 public class JDBCConnection {
-
+    private static final String url = "jdbc:mysql://localhost/XXX";
+    private static final String username = "root";
+    private static final String password = "";
 
     /**
      * Gets connection.

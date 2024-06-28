@@ -1,4 +1,4 @@
 package jsl.groups.utilities;
 
-public record DeleteResponse(String ssn, String message) {
+public record DeleteResponse(String id, String message) {
 }
